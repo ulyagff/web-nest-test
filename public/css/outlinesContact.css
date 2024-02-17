@@ -1,0 +1,210 @@
+
+#header-main-h{
+    width: 255px;
+    margin: 0 auto 1px;
+    font-family: "Georgia", serif;
+    text-align: center;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase; /* Преобразование в верхний регистр */
+
+}
+.header-sub{
+    width: 255px;
+    margin: 0 auto 1px;
+    font-family: "Georgia", serif;
+    text-align: center; /* Выравнивание текста */
+    font-weight: normal; /* Насыщенность шрифта */
+    font-size: 20px; /* Размер шрифта */
+    line-height: 64px;
+    text-decoration: underline; /* Подчеркивание текста */
+}
+
+nav {
+    background-color: #555;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: justify;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.active {
+    background-color: #FFB6C1;
+    font-weight: bold;
+}
+
+
+
+.rose {
+    background: #FFB6C1;
+    font: 18px Tahoma, sans-serif;
+    padding: 10px;
+    margin: 30px 0 0 0;
+}
+
+.yellow {
+    background: #FFFFE0;
+    font: 18px Tahoma, sans-serif;
+    padding: 10px; /* Внешние отступы */
+    margin: 30px 0 0 0; /* Внутренние отступы */
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-main-h {
+    padding: 10px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    font: 18px Tahoma, sans-serif;
+    background-color: #f8f8f8;
+}
+
+footer {
+    background-color: #FFFFE0;
+    width: 100%;
+    text-align: center;
+    align-self: flex-end;
+}
+
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    /*display: flex;*/
+}
+
+footer li {
+    margin-right: 20px;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+p {
+    font-size: 16px;
+    font-style: italic; /* Стилизация переформатированного текста */
+    line-height: 1.5; /* Высота строки */
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+
+}
+
+.custom-pre {
+    width: 90%; /* Ширина элемента pre в 90% от родительского элемента */
+    margin: 0 auto; /* Центрирование элемента pre внутри родительского элемента */
+    overflow-x: auto; /* Добавление горизонтальной прокрутки при необходимости */
+}
+
+.tableConstructor {
+    padding: 150px 100px 100px 100px;
+    text-align: center;
+}
+
+.tableConstructor h2 {
+    color: #2f2f2f;
+    text-shadow: 1px 1px 1px#2f2f2f;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+form {
+    color: #2f2f2f;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    color: #2f2f2f;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+select {
+    color: #2f2f2f;
+    text-align: left;
+    width: 100%;
+    background: radial-gradient(ellipse closest-side,  white 40%, #f6eaf3);
+    font-size: 25px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+input[type="number"] {
+    color: #2f2f2f;
+    width: 100%;
+    height: 30px;
+    background: #FFFFE0;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 10px 10px 10px 10px white;
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+input[type="submit"] {
+    color: #2f2f2f;
+    height: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    width: 250px;
+    font-weight: bold;
+    border: none;
+    background: #FFFFE0;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px white;
+    margin-bottom: 40px;
+}
+
+#tableContainer {
+    display: grid;
+}
+
+th {
+    font-weight: normal;
+    color: #818CF8;
+    padding: 10px 15px;
+    font-size: 25px;
+}
+td {
+    font-size: 18px;
+    text-align: center;
+    color: #818CF8;
+    border-top: 1px solid #e8edff;
+    padding: 30px 30px 30px 30px;
+}
+
+tr {
+    background:  #f5d8ed;
+}
+tr:nth-child(2n) {
+    background: white;
+}

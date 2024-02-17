@@ -1,0 +1,322 @@
+
+
+#header-main-h{
+    width: 255px;
+    margin: 0 auto 1px;
+    font-family: "Georgia", serif;
+    text-align: center;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase; /* Преобразование в верхний регистр */
+
+}
+.header-sub{
+    width: 255px;
+    margin: 0 auto 1px;
+    font-family: "Georgia", serif;
+    text-align: center; /* Выравнивание текста */
+    font-weight: normal; /* Насыщенность шрифта */
+    font-size: 20px; /* Размер шрифта */
+    line-height: 64px;
+    text-decoration: underline; /* Подчеркивание текста */
+}
+
+nav {
+    background-color: #555;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: justify;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #FFB6C1;
+    font-weight: bold;
+}
+
+
+.rose {
+    background: #FFB6C1;
+    font: 18px Tahoma, sans-serif;
+    padding: 10px;
+    margin: 30px 0 0 0;
+}
+
+.yellow {
+    background: #FFFFE0;
+    font: 18px Tahoma, sans-serif;
+    padding: 10px; /* Внешние отступы */
+    margin: 30px 0 0 0; /* Внутренние отступы */
+
+}
+
+
+aside > p {
+    background: #FFFFE0;
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-main-h {
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    font: 18px Tahoma, sans-serif;
+    background-color: #f8f8f8;
+}
+
+article {
+    flex: 7;
+    padding: 20px;
+}
+
+aside {
+    flex: 3;
+    padding: 20px;
+}
+
+footer {
+    background-color: #FFFFE0;
+    width: 100%;
+    text-align: center;
+    align-self: flex-end;
+}
+
+img {
+    box-shadow: 5px 5px 10px #888888;
+}
+
+img[alt="Пригожин"] {
+    width: 650px;
+}
+
+img[alt="ahaha"] {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    /*display: flex;*/
+}
+
+footer li {
+    margin-right: 20px;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+p {
+    font-size: 16px;
+    font-style: italic; /* Стилизация переформатированного текста */
+    line-height: 1.5; /* Высота строки */
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+
+}
+
+.custom-pre {
+    width: 90%; /* Ширина элемента pre в 90% от родительского элемента */
+    margin: 0 auto; /* Центрирование элемента pre внутри родительского элемента */
+    overflow-x: auto; /* Добавление горизонтальной прокрутки при необходимости */
+}
+
+.image-container {
+    /*display: flex;*/
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    max-height: 300px; /* Задаем максимальную высоту */
+    width: auto; /* Ширина автоматически рассчитывается для сохранения пропорций */
+    margin: 5px; /* Добавляем немного отступа между изображениями */
+}
+
+.absolut {
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.preloader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #FFB6C1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+
+.demo-area{
+    background:#FFB6C1;
+    border-radius:8px;
+    padding:20px;
+}
+
+.zoom-trigger {
+    display: inline-block;
+    width: 20%;
+    float: left;
+}
+
+.detail {
+    position: relative;
+    width: 60%;
+    margin-left: 5%;
+    float: left;
+    & button {
+        vertical-align:middle;
+        opacity:.5;
+        cursor:unset;
+        margin-left:1em;
+    }
+}
+
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 1200px) {
+
+    article {
+        width: 100%;
+        padding: 10px;
+    }
+    img[alt="Пригожин"] {
+        width: 90%;
+    }
+
+    aside {
+        display: none;
+    }
+
+    p {
+        width: 95%;
+        font-size: 16px;
+        font-style: italic; /* Стилизация переформатированного текста */
+        line-height: 1.5; /* Высота строки */
+        font-family: 'Arial', sans-serif;
+        text-align: justify;
+    }
+
+}
+
+@media (max-width: 900px) {
+    nav a {
+        float: none;
+        width: 95%;
+        text-align: justify;
+    }
+    article {
+        width: 100%;
+        padding: 10px;
+    }
+    img[alt="Пригожин"] {
+        width: 90%;
+    }
+
+    aside {
+        display: none;
+    }
+
+    p {
+        width: 95%;
+        font-size: 16px;
+        font-style: italic; /* Стилизация переформатированного текста */
+        line-height: 1.5; /* Высота строки */
+        font-family: 'Arial', sans-serif;
+        text-align: justify;
+    }
+
+    .custom-pre {
+        display: none;
+    }
+
+    .image-container img {
+        max-height: 200px; /* Уменьшаем высоту для более узких экранов */
+    }
+
+    .detail, .zoom-trigger {
+        float: none;
+    }
+
+    .zoom-trigger {
+        display:block;
+        width: 50%;
+        max-width:200px;
+        margin: 0 auto;
+    }
+
+    .detail {
+        margin: 0;
+        width: auto;
+    }
+
+    p {
+        margin: 0 auto 1em;
+    }
+
+    .responsive-hint {
+        display: none;
+    }
+    h3 {
+        margin-top:20px;
+    }
+
+}
