@@ -1,21 +1,39 @@
-import { Controller, Get, Render, Res } from "@nestjs/common";
-import { Response } from 'express';
+import { Controller, Get, Render, Req, UseInterceptors } from '@nestjs/common';
 
 import { AppService } from './app.service';
+import { TimeInterceptor } from './time-counter';
 
 @Controller()
+@UseInterceptors(TimeInterceptor)
 export class AppController {
   constructor(private readonly appService: AppService) {}
-
-  @Get('index.hbs')
+  @Get('prigozhin')
   @Render('index.hbs')
-  index() {}
+  prigozin(@Req() req) {
+    return {
+      page: 'prigozhin',
+      time: performance.now() - req.body['start'],
+      user: 'Ulyana',
+    };
+  }
 
-  @Get('contact.hbs')
-  @Render('contact.hbs')
-  contact() {}
+  @Get('contact')
+  @Render('index.hbs')
+  contact(@Req() req) {
+    return {
+      page: 'contact',
+      time: performance.now() - req.body['start'],
+      user: 'Ulyana',
+    };
+  }
 
-  @Get('study.hbs')
-  @Render('study.hbs')
-  study() {}
+  @Get('study')
+  @Render('index.hbs')
+  study(@Req() req) {
+    return {
+      page: 'study',
+      time: performance.now() - req.body['start'],
+      user: 'Ulyana',
+    };
+  }
 }
