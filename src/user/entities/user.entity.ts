@@ -1,10 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, BaseEntity } from 'typeorm';
 import { Post } from '../../post/entities/post.entity';
-import { Action } from '../../action/entities/action.entity';
+// import { Action } from '../../action/entities/action.entity';
 import { Comment } from '../../comment/entities/comment.entity';
 
 @Entity()
-export class User {
+export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -17,12 +17,12 @@ export class User {
   @Column()
   password: string;
 
-  @OneToMany(() => Post, (post) => post.author)
+  @OneToMany(() => Post, post => post.author)
   submittedPosts: Post[];
 
-  @OneToMany(() => Comment, (comment) => comment.author)
+  @OneToMany(() => Comment, comment => comment.author)
   submittedComments: Comment[];
 
-  @OneToMany(() => Action, (action) => action.author)
-  submittedActions: Action[];
+  // @OneToMany(() => Action, action => action.author)
+  // submittedActions: Action[];
 }

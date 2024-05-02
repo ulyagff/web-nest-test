@@ -9,5 +9,5 @@ export interface User {
   password: string;
   submittedPosts?: Post[];
   submittedComments?: Comment[];
-  submittedActions?: Action[];
+  // submittedActions?: Action[];
 }

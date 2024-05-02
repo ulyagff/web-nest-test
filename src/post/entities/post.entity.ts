@@ -6,7 +6,7 @@ import {
   OneToMany,
 } from 'typeorm';
 import { User } from '../../user/entities/user.entity';
-import { Action } from '../../action/entities/action.entity';
+// import { Action } from '../../action/entities/action.entity';
 import { Comment } from '../../comment/entities/comment.entity';
 
 @Entity()
@@ -35,6 +35,6 @@ export class Post {
   @OneToMany(() => Comment, (comment) => comment.post)
   comments: Comment[];
 
-  @OneToMany(() => Action, (action) => action.post)
-  actions: Action[];
+  // @OneToMany(() => Action, (action) => action.post)
+  // actions: Action[];
 }
