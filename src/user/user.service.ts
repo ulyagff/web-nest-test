@@ -1,29 +1,27 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-// import { InjectRepository } from '@nestjs/typeorm';
-// import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
 import { CreateUserDto } from './dto/user.dto';
-import { dataSource } from '../data.source';
 
 @Injectable()
 export class UserService {
-  // constructor(
-  //   @InjectRepository(User)
-  //   private userRepository: Repository<User>,
-  // ) {}
+  constructor(
+    @InjectRepository(User)
+    private userRepository: Repository<User>,
+  ) {}
 
   async createUser(createUserDto: CreateUserDto) {
-    const userRepository = dataSource.getRepository(User);
-    const newUser = await userRepository.create(createUserDto);
-    return await userRepository.save(newUser);
+    const newUser = await this.userRepository.create(createUserDto);
+    return await this.userRepository.save(newUser);
   }
 
   async getAllProfile() {
-    return dataSource.getRepository(User).find();
+    return this.userRepository.find();
   }
 
   async getProfile(id: number) {
-    const user = await dataSource.getRepository(User).findOneBy({ id });
+    const user = await this.userRepository.findOneBy({ id });
     // const user = await this.userRepository.findOne();
 
     if (!user) {
@@ -34,7 +32,7 @@ export class UserService {
   }
 
   async deleteUser(userId: number) {
-    const result = await dataSource.getRepository(User).delete(userId);
+    const result = await this.userRepository.delete(userId);
     if (!result.affected) {
       throw new HttpException('User not found', HttpStatus.NOT_FOUND);
     }
