@@ -331,3 +331,22 @@ tbody tr:nth-child(odd) {
     text-align: center;
 
 }
+
+.post {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post p {
+    margin-bottom: 5px;
+}
+
+.post p:last-child {
+    margin-bottom: 0;
+}

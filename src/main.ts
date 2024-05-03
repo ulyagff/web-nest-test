@@ -3,6 +3,8 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 import { join } from 'path';
 import * as dotenv from 'dotenv';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+
 
 dotenv.config();
 
@@ -25,6 +27,15 @@ async function bootstrap() {
       partialsDir: [path.join(__dirname, '..', 'views/partials')],
     }),
   );
+
+  const config = new DocumentBuilder()
+    .setTitle('News Service API')
+    .setDescription('The News Service API description')
+    .setVersion('1.0')
+    .build();
+
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
 
   await app.listen(PORT);
 }

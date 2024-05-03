@@ -1,0 +1,13 @@
+<h1>All Posts</h1>
+<div id="posts-container">
+  {{#each posts}}
+    <div class="post">
+      <h2>{{title}}</h2>
+      <p>{{content}}</p>
+      <p>Author: {{author.name}}</p>
+      <p>Published: {{publishedDate}}</p>
+      <p>Likes: {{likes}}</p>
+      <p>Dislikes: {{dislikes}}</p>
+    </div>
+  {{/each}}
+</div>

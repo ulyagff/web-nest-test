@@ -8,23 +8,14 @@ import { PostModule } from './post/post.module';
 import { CommentModule } from './comment/comment.module';
 import { ActionModule } from './action/action.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-// import ormconfig from '../orm.config';
-import * as ormconfig from "../orm.config"
-// import connectionOptions from '../orm.config';
 import { User } from './user/entities/user.entity';
 import { Post } from './post/entities/post.entity';
-// import { Action } from './action/entities/action.entity';
 import { Comment } from './comment/entities/comment.entity';
 
 // import { join } from 'path';
 
 @Module({
   imports: [
-    // TypeOrmModule.forRoot({
-    //   ...ormconfig, //db config
-    //   entities: [User, Post, Action, Comment],
-    // }),
-    // TypeOrmModule.forRoot(ormconfig),
     TypeOrmModule.forRoot({
       type: 'postgres',
       database: 'news_s7d3',
@@ -37,7 +28,6 @@ import { Comment } from './comment/entities/comment.entity';
       synchronize: true,
       ssl: true,
     }),
-    // DatabaseModule,
     UserModule,
     PostModule,
     CommentModule,
